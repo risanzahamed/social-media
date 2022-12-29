@@ -41,7 +41,7 @@ const Register = () => {
 
     const saveUser = (name, email, university, address) => {
         const user = { name, email, university, address }
-        fetch('http://localhost:8000/users', {
+        fetch('https://social-media-server-six.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

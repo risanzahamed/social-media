@@ -48,12 +48,12 @@ const router = createBrowserRouter([
        {
         path:'/user/:id',
         element:<UpdateUser/>,
-        loader: ({params})=>fetch(`http://localhost:8000/user/${params.id}`)
+        loader: ({params})=>fetch(`https://social-media-server-six.vercel.app/user/${params.id}`)
        },
        {
         path:'/post/:id',
         element:<FullPostPage/>,
-        loader: ({params})=>fetch(`http://localhost:8000/post/${params.id}`)
+        loader: ({params})=>fetch(`https://social-media-server-six.vercel.app/post/${params.id}`)
        },
        
 

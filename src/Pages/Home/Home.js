@@ -31,7 +31,7 @@ const Home = () => {
                         details: data.details,
                         image: imageData.data.url,
                     }
-                    fetch('http://localhost:8000/posts', {
+                    fetch('https://social-media-server-six.vercel.app/posts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'
@@ -53,7 +53,7 @@ const Home = () => {
     const [posts, setPosts] = useState()
 
     useEffect(() => {
-        fetch('http://localhost:8000/home/posts')
+        fetch('https://social-media-server-six.vercel.app/home/posts')
             .then(res => res.json())
             .then(data => {
                 setPosts(data)

@@ -10,7 +10,7 @@ const About = () => {
     const [userData, setUserData] = useState()
 
     useEffect(() => {
-        fetch(`http://localhost:8000/user?email=${user?.email}`)
+        fetch(`https://social-media-server-six.vercel.app/user?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setUserData(data)

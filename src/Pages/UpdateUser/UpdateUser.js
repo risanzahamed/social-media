@@ -11,7 +11,7 @@ const UpdateUser = () => {
     const handleUpdateUserInfo = event => {
         event.preventDefault();
         // console.log(user);
-        fetch(`http://localhost:8000/users/${data._id}`, {
+        fetch(`https://social-media-server-six.vercel.app/users/${data._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

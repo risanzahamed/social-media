@@ -6,7 +6,7 @@ const Media = () => {
     const [posts, setPosts] = useState()
 
     useEffect(()=>{
-        fetch('http://localhost:8000/posts')
+        fetch('https://social-media-server-six.vercel.app/posts')
         .then(res => res.json())
             .then(data => {
                 setPosts(data)

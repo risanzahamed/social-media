@@ -12,7 +12,7 @@ const PostPage = ({ post }) => {
         const addLike = {
             like: like + 1
         }
-        fetch('http://localhost:8000/like', {
+        fetch('https://social-media-server-six.vercel.app/like', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -25,7 +25,7 @@ const PostPage = ({ post }) => {
     }
 
     useEffect(() => {
-        fetch("http://localhost:8000/like")
+        fetch("https://social-media-server-six.vercel.app/like")
             .then(res => res.json())
             .then(result => {
                 setLike(like + 1)

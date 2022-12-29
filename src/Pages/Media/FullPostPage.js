@@ -16,7 +16,7 @@ const FullPostPage = () => {
         const name = form.name.value;
         const comment = form.comment.value;
         const postComment = { name, comment }
-        fetch('http://localhost:8000/comment', {
+        fetch('https://social-media-server-six.vercel.app/comment', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -31,7 +31,7 @@ const FullPostPage = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:8000/comment')
+        fetch('https://social-media-server-six.vercel.app/comment')
             .then(res => res.json())
             .then(data => {
                 setComment(data)
