@@ -52,7 +52,7 @@ const router = createBrowserRouter([
        },
        {
         path:'/post/:id',
-        element:<FullPostPage/>,
+        element:<PrivateRoute><FullPostPage/></PrivateRoute>,
         loader: ({params})=>fetch(`https://social-media-server-six.vercel.app/post/${params.id}`)
        },
 

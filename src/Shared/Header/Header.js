@@ -47,24 +47,24 @@ const Header = () => {
                             </Link>
                             {
                                 user?.uid ? <>
-                                <Link to='/media'>
-                                <li onClick={() => selected(1)} className={`${style[1] ? 'text-white bg-indigo-600' : 'text-gray-600 border border-white bg-gray-50'}  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800  cursor-pointer px-3 py-2.5 font-normal text-1xl leading-3 shadow-md rounded`}>Media</li>
-                            </Link>
-                            <Link to='/about'>
-                                <li onClick={() => selected(2)} className={`${style[2] ? 'text-white bg-indigo-600' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-1xl leading-3 shadow-md rounded`}>About</li>
-                            </Link>
+                                    <Link to='/media'>
+                                        <li onClick={() => selected(1)} className={`${style[1] ? 'text-white bg-indigo-600' : 'text-gray-600 border border-white bg-gray-50'}  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800  cursor-pointer px-3 py-2.5 font-normal text-1xl leading-3 shadow-md rounded`}>Media</li>
+                                    </Link>
+                                    <Link to='/about'>
+                                        <li onClick={() => selected(2)} className={`${style[2] ? 'text-white bg-indigo-600' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-1xl leading-3 shadow-md rounded`}>About</li>
+                                    </Link>
 
-                            <Link to='/message'>
-                                <li onClick={() => selected(3)} className={`${style[3] ? 'text-white bg-indigo-600' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-1xl leading-3 shadow-md rounded `}>Message</li>
-                            </Link>
-                                
+                                    <Link to='/message'>
+                                        <li onClick={() => selected(3)} className={`${style[3] ? 'text-white bg-indigo-600' : 'text-gray-600 border border-white bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-1xl leading-3 shadow-md rounded `}>Message</li>
+                                    </Link>
+
                                 </> : <></>
                             }
 
                             {
-                                user?.email ? 
-                                <button className='   text-gray-600 border border-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-1xl leading-3 shadow-md rounded'
-                                onClick={handleUserLogout}>LogOut</button>
+                                user?.email ?
+                                    <button className='   text-gray-600 border border-white  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer px-3 py-2.5 font-normal text-1xl leading-3 shadow-md rounded'
+                                        onClick={handleUserLogout}>LogOut</button>
 
                                     : <>
 
@@ -99,19 +99,24 @@ const Header = () => {
                             </Link>
 
 
-                            <Link to='/media'>
-                                <li onClick={() => setSelectedText("Media")} className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-1xl leading-3 font-normal">Media</li>
-                            </Link>
+                            {
+                                user?.email ? <>
+                                    <Link to='/media'>
+                                        <li onClick={() => setSelectedText("Media")} className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-1xl leading-3 font-normal">Media</li>
+                                    </Link>
 
 
-                            <Link to='/about'>
-                                <li onClick={() => setSelectedText("About")} className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-1xl leading-3 font-normal">About</li>
-                            </Link>
+                                    <Link to='/about'>
+                                        <li onClick={() => setSelectedText("About")} className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-1xl leading-3 font-normal">About</li>
+                                    </Link>
 
 
-                            <Link to='/message'>
-                                <li onClick={() => setSelectedText("Message")} className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-1xl leading-3 font-normal">Message</li>
-                            </Link>
+                                    <Link to='/message'>
+                                        <li onClick={() => setSelectedText("Message")} className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-1xl leading-3 font-normal">Message</li>
+                                    </Link>
+
+                                </> : <></>
+                            }
 
                             {
                                 user?.email ? <button className=' px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-1xl leading-3 font-normal'
