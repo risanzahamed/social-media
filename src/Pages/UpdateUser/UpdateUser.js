@@ -1,16 +1,16 @@
-import React, { useContext, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../Context/AuthContext/AuthContext';
+import React, { useState } from 'react';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 const UpdateUser = () => {
 
     const data = useLoaderData();
     const [updatedUser, setUpdatedUser] = useState(data);
+    const navigate = useNavigate()
 
     const handleUpdateUserInfo = event => {
         event.preventDefault();
-        // console.log(user);
+     
         fetch(`https://social-media-server-six.vercel.app/users/${data._id}`, {
             method: 'PUT',
             headers: {
@@ -22,7 +22,8 @@ const UpdateUser = () => {
             .then(data => {
                 if (data.modifiedCount > 0) {
                     toast.success('user updated')
-                    console.log(data);
+                    navigate('/about')
+
                 }
 
             })

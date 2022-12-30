@@ -25,15 +25,12 @@ const Login = () => {
                 const user = result.user;
                 toast.success('User login Successfully!')
                 navigate('/')
-                console.log(user);
                 form.reset()
-
-                // navigator(from, { replace: true })
             })
             .catch(error => {
-                console.log(error)
+              
                 toast.error('Something was wrong! Please try again!')
-                form.reset()
+                
             });
     }
 
@@ -47,7 +44,7 @@ const Login = () => {
                 console.log(user);
             })
             .catch(error => {
-                console.log(error)
+              
                 toast.error('Something was wrong! Please try again!')
             });
     }
@@ -122,6 +119,7 @@ const Login = () => {
                                     <input type="submit" value="Login"
                                         className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out cursor-pointer "
                                     />
+                                    <h2 className="text-md font-semibold mt-2 pt-1 mb-0">{errorpassword}</h2>
                                     <p className="text-sm font-semibold mt-2 pt-1 mb-0">
                                         Don't have an account?
 
